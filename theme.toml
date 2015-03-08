@@ -1,0 +1,6 @@
+author = "Elle Kasai"
+description = "A Bootstrap-Based Hugo Theme."
+license = "MIT"
+name = "hugo-theme-shiori"
+source_repo = "https://github.com/chibicode/hugo-theme-shiori"
+tags = ["blog", "personal"]

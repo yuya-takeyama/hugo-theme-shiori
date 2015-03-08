@@ -1,0 +1,19 @@
+{{ partial "layout_begin.html" . }}
+<div class="row">
+  <div class="col-sm-8">
+    <div class="page-archive">
+      {{ range .Data.Pages.ByDate.Reverse }}
+        {{ if eq .Type "post" }}
+          <p>
+            <a href="{{ .Site.BaseUrl }}{{ .RelPermalink }}" class="post-title-archive">{{ .Title }}</a>
+            <small class="text-muted">{{ .Date.Format "Jan 2, 2006" }}</small>
+          </p>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="col-sm-4">
+    {{ partial "sidebar.html" }}
+  </div>
+</div>
+{{ partial "layout_end.html" . }}
