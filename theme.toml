@@ -1,6 +1,17 @@
-author = "Elle Kasai"
-description = "A Bootstrap-Based Hugo Theme."
+name = "Shiori"
 license = "MIT"
-name = "hugo-theme-shiori"
-source_repo = "https://github.com/chibicode/hugo-theme-shiori"
+licenselink = "https://github.com/chibicode/hugo-theme-shiori/blob/master/LICENSE.md"
+description = "A Bootstrap-based Hugo theme."
+homepage = "http://github.com/chibicode/hugo-theme-shiori"
 tags = ["blog", "personal"]
+features = ["blog"]
+min_version= 0.13
+
+[author]
+    name =  "Shusaku Uesugi"
+    homepage = "http://chibicode.com/"
+
+[original]
+    author = "Elle Kasai"
+    homepage = "http://ellekasai.github.io/shiori/"
+    repo = "https://github.com/ellekasai/shiori"
