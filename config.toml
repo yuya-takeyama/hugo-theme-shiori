@@ -4,5 +4,12 @@ publishdir = "public"
 builddrafts = false
 baseUrl = ""
 canonifyurls = true
+
+
 title = "Shiori"
-author = ""
+author = "Shu Uesugi"
+
+# [params]
+#     author_name = "Shu Uesugi"
+#     twitter_username = "chibicode"
+#     gravatar_id = "d747ad92018acd87a77899704fc6693d"
