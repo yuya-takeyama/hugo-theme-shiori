@@ -2,7 +2,7 @@
 
 Partial port of [Shiori](http://github.com/ellekasai/shiori) theme to [Hugo](http://gohugo.io).
 
-![](http://cl.ly/image/3l2q2P0Z3k1y/screenshot%202015-03-10%20at%208.24.24%20PM.png)
+![](images/snapshot.png)
 
 ## Changed from the Original
 
