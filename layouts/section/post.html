@@ -5,8 +5,8 @@
       {{ range .Site.Pages.ByDate.Reverse }}
         {{ if eq .Type "post" }}
           {{ $post_month_year := .Date.Format "January 2006" }}
-          {{ if .PrevInSection }}
-            {{ $newer_post_month_year := .PrevInSection.Date.Format "January 2006" }}
+          {{ if .NextInSection }}
+            {{ $newer_post_month_year := .NextInSection.Date.Format "January 2006" }}
             {{ if not (eq $post_month_year $newer_post_month_year) }}
               <h3 class="section-header-archive">
                 {{ $post_month_year }}
@@ -18,7 +18,7 @@
             </h3>
           {{ end }}
           <p>
-            <a href="{{ .Site.BaseUrl }}{{ .RelPermalink }}" class="post-title-archive">{{ .Title }}</a>
+            <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}" class="post-title-archive">{{ .Title }}</a>
             <small class="text-muted">{{ .Date.Format "Jan 2, 2006" }}</small>
           </p>
         {{ end }}
