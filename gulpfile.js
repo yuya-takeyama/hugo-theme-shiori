@@ -19,7 +19,7 @@ var AUTOPREFIXER_BROWSERS = [
 
 gulp.task('sass', function() {
   return gulp.src([
-    'static_src/stylesheets/*.scss'
+    'static_src/stylesheets/*.scss',
   ])
     .pipe($.changed('static/stylesheets'))
     .pipe($.sass({
@@ -36,7 +36,8 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
   return gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'
+    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+    'static_src/javascripts/highlight.min.js'
   ])
     .pipe($.changed('static/javascripts'))
     .pipe($.concat('shiori.js'))

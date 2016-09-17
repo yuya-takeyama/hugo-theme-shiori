@@ -9,3 +9,7 @@
   @extend .table;
   @extend .table-bordered;
 }
+.post-content pre {
+  border: 0 !important;
+  padding: 0 !important;
+}
