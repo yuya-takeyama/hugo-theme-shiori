@@ -1,0 +1,30 @@
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+{{ if .IsPage }}
+  {{ with .Params.images }}
+    {{ range first 6 . }}
+      <meta property="og:image" content="{{ . | absURL }}" />
+    {{ end }}
+  {{ else }}
+	  <meta property="og:image" content="{{ .Site.BaseURL }}/images/avatar.jpg" />
+  {{ end }}
+{{ else }}
+  {{ with .Site.Params.images }}
+    {{ range first 6 . }}
+      <meta property="og:image" content="{{ . | absURL }}" />
+    {{ end }}
+  {{ else }}
+	  <meta property="og:image" content="{{ .Site.BaseURL }}/images/avatar.jpg" />
+  {{ end }}
+{{ end }}
+{{ if not .Date.IsZero }}
+  <meta property="og:updated_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>
+{{ end }}
+{{ with .Params.locale }}
+  <meta property="og:locale" content="{{ . }}" />
+{{ end }}
+{{ with .Site.Params.title }}
+  <meta property="og:site_name" content="{{ . }}" />
+{{ end }}
