@@ -9,7 +9,14 @@
   @extend .table;
   @extend .table-bordered;
 }
-.post-content pre {
-  border: 0 !important;
-  padding: 0 !important;
+.post-content {
+  pre {
+    border: 0 !important;
+    padding: 0 !important;
+
+    code {
+      white-space: pre;
+      border-radius: 4px;
+    }
+  }
 }
