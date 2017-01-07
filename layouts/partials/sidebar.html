@@ -11,7 +11,11 @@
     {{ end }}
     {{ if .Site.Params.author_name }}
     <div class="media-body">
-      <h4 class="media-heading">{{ .Site.Params.author_name }}</h4>
+      {{ if .Site.Params.website_url }}
+        <h4 class="media-heading"><a href="{{ .Site.Params.website_url}}">{{ .Site.Params.author_name }}</a></h4>
+      {{ else }}
+        <h4 class="media-heading">{{ .Site.Params.author_name }}</h4>
+      {{ end }}
     </div>
     {{ end }}
   </div>
